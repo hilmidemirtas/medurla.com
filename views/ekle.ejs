@@ -6,22 +6,25 @@
       <article class="row py-2">
 
         
-
+        <% for (let i=0; i< yenis.length; i++) { %>
         
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 mx-auto py-2">
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xxl-2 mx-auto py-2" >
           <div class="card mx-auto">
             <img class="card-img-top img-fluid"
               src="https://simplyexplainer.com/wp-content/uploads/2019/12/health-care-01.png" alt="Card image cap">
             <div class="card-body text-center nav-text-mycss">
-              <h4>Adrenalin</h4>
-              <p>Epinefrin</p>
-              <div class="my-3"><button class="btn btn-success"><a href="/adrenalin">Adrenalin</a></button></div>
+              <h4><%= yenis[i].baslik %></h4>
+              <p><%= yenis[i].altbaslik %></p>
+              <div class="my-3"><button class="btn btn-success"><a href="/ekle/<%= yenis[i].slug %>"><%= yenis[i].baslik %></a></button></div>
             </div>
           </div>
         </div>
-      
+
+        <% } %>
 
       </article>
+      
+   
     </div>
   </section>
 

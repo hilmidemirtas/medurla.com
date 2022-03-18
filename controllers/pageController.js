@@ -1,8 +1,10 @@
 
 
 exports.getIndexPage = (req, res) => {
+  console.log(req.session.userID);
     res.status(200).render("index", {
-        page_name: "index",
+      page_name: "index"
+      
       });
 };
 
@@ -13,9 +15,8 @@ exports.getAdrenalinPage = (req, res) => {
 };
 
 
-exports.getAddPage = (req, res) => {
-    res.render("add", {
-        page_name: "add",
+exports.getKayıtPage = (req, res) => {
+    res.status(200).render("kayit", {
       });
 };
 
@@ -25,3 +26,12 @@ exports.getIlaclarPage = (req, res) => {
       });
 };
 
+exports.getLoginPage = (req, res) => {
+  res.status(200).render("login", {
+    });
+};
+
+/* exports.getProfilPage = (req, res) => {
+  res.status(200).render("profil", {
+    });
+}; */

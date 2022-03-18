@@ -1,7 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 const pageRoute = require("./routers/pageRoute");
-const addRoute = require("./routers/addRoute");
+const ekleRoute = require("./routers/ekleRoute");
+const categoryRoute = require("./routers/categoryRoute");
+const userRoute = require("./routers/userRoute");
 const app = express();
 
 //mongoose Connect DB
@@ -30,6 +34,9 @@ mongoose.connect('mongodb://localhost/medurla_database', {
 }); 
 */
 
+//Global kullanıcı giriş değişkeni
+global.userIN = null;
+
 //Template Engine
 app.set("view engine", "ejs");
 
@@ -37,54 +44,27 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use(session({
+  secret: 'user_session',
+  resave: false,
+  saveUninitialized: true,
+  store: MongoStore.create({ mongoUrl: 'mongodb://localhost/yeni2_database' }),  
+}));
+
+
+//global kullanıcı değişkeni
+app.use('*', (req, res, next) => {
+  userIN = req.session.userID;
+  next();
+});
 
 //Routes
 app.use("/", pageRoute);
-app.use("/add", addRoute);
+app.use("/ekle", ekleRoute);
+app.use("/kategoriler", categoryRoute);
+app.use("/users", userRoute);
 
-/*
-app.get("/index", (req, res) => {
-  res.status(200).render("index", {
-    page_name: "index",
-  });
-});
 
-app.get("/ilaclar", (req, res) => {
-  res.status(200).render("ilaclar", {
-    page_name: "ilaclar",
-  });
-});
-
-app.get("/algoritmalar", (req, res) => {
-  res.status(200).render("algoritmalar", {
-    page_name: "algoritmalar",
-  });
-});
-
-app.get("/cihazlar", (req, res) => {
-  res.status(200).render("cihazlar", {
-    page_name: "cihazlar",
-  });
-});
-
-app.get("/adrenalin", (req, res) => {
-  res.render("adrenalin", {
-    page_name: "adrenalin",
-  });
-});
-
-app.get("/add", (req, res) => {
-  res.render("add", {
-    page_name: "add",
-  });
-});
-
-app.get("/kayıt", (req, res) => {
-  res.render("kayıt", {
-    page_name: "kayıt",
-  });
-});
-*/
 
 const port = 3000;
 app.listen(port, () => {

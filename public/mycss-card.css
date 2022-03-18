@@ -1,6 +1,7 @@
 @charset "utf-8";
 body {
     background-color: #23242C;
+    color: white;
     
 }
 /*
@@ -18,12 +19,17 @@ body {
     
 }
 */
-.form-inline {
+/* .form-inline {
     display: block;
     width: 5rem;
+} */
+
+.person {
+    background-color: rgb(155, 196, 120);
+    border-radius: 25px;
+    overflow: hidden;
+
 }
-
-
 
 
 .logo-mycss {
@@ -35,13 +41,13 @@ body {
     background-color: #327e735b;
 }
 
-.nav-text-mycss {
+/* .nav-text-mycss {
     font-size: 2vh;
     font-weight:bold;
     color:beige !important;
     
 }
-
+ */
 .hover-mycss:hover {
     background-color:floralwhite;
     border-radius:40px;
@@ -98,5 +104,3 @@ a {
     border-radius: 10px;
     border:2px solid rgba(255, 255, 255, 0.342);
 }
-
-

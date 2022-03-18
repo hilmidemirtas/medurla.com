@@ -1,0 +1,68 @@
+<header id="header">
+    <nav class="navbar navbar-expand-md navbar-dark nav-bg-mycss py-3">
+      <div class="container">
+        <a class="navbar-brand logo" href="#">MediArt</a>
+        <a class= "navbar-brand" href="site.html"><img class="logo-mycss" src="android-icon-36x36.png" style="border-bottom: none;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-text-mycss" href="ilaclar.html">İLAÇLAR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-text-mycss" href="algoritmalar.html">ALGORİTMALAR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-text-mycss" href="cihazlar.html">CİHAZLAR</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link nav-text-mycss" href="cihazlar.html"><i class="bi bi-file-person"></i></a>
+            </li> -->
+           
+            
+
+          </ul>
+        </div>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" id="filter" type="search" placeholder="Search" aria-label="Search" autocomplete="off" onkeyup="buttonUp();">
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <form method="POST" action="users/login" class="mx-auto mt-5 p-2" style="width: 300px;box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgba(255, 255, 255, 0.548);" id="form">
+    <h3>Giriş</h3>
+    <!--kullaniciadi-->
+
+  <!--  
+      <div class="mb-3">
+      <label for="name" class="form-label">Kullanıcı Adı</label>
+      <input type="text" name ="name" class="form-control" id="name" autocomplete="off">
+    </div>
+    -->
+
+    <!--mail-->
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Mail</label>
+        <input type="mail" name="email" class="form-control" id="email" autocomplete="off">
+      </div>
+
+       <!--şifre-->
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Şifre</label>
+        <input type="password" name= "password" class="form-control" id="password" autocomplete="off">
+      </div>
+
+      
+
+   <div class="text-center">
+    <button type="submit" id="submit" class="dnm btn btn-success">Giriş</button>
+    <button type="reset" class="btn btn-secondary">Temizle</button>
+   </div>
+  </form>
+ 

@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: Arial;
+  }
+  
+  .ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 1vh 0 1vh 0;
+      overflow: hidden;
+      /*
+      background-color: rgb(7, 127, 207);
+      */
+      background-color: #327e735b;
+    }
+    
+    .li {
+      float: left;
+      border-right:1px solid #bbb;
+    }
+    
+    .li a {
+      display: block;
+      color: white;
+      text-align: center;
+      font-size: 2vh;
+      padding: 1.6vh 1.7vh;
+      text-decoration: none;
+    }
+  
+    .ben {
+        background-color: rgba(43, 238, 76, 0.733);
+        border-radius: 50px;
+    }
+    
+    .li a:hover:not(.gndm) {
+      background-color:floralwhite;
+      border-radius:48px;
+      color: black;
+      font-style:italic;
+      
+    }
+  
+ 
+  .main {
+    
+    max-width: 1200px;
+    margin: 1rem auto auto auto;
+  
+  }
+  
+  
+  .row {
+    margin: 8px -16px;
+  }
+  
+ 
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+ 
+  .column {
+    float: left;
+    width: 32%;
+    height: 550px;
+    box-shadow: 0 1px 4px 0 rgb(255, 255, 255), 0 1px 4px 0 rgba(255, 255, 255, 0.548);
+    
+    border-radius: 19px;
+  }
+  
+  .column:hover {
+    transition: 0.3;
+      box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgba(255, 255, 255, 0.548);
+    cursor: pointer;
+    border-radius: 15px;
+  
+  
+  }
+  
+ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .content {
+    padding: 10px;
+  }
+  
+
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+ 
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  
+  h3 {
+      padding: 5px;
+      background-color: #A7BBB8;
+      border-radius: 8px;
+      text-align: center;
+      
+  }
+
+  h3:hover {
+      background-color: rgba(173, 216, 230, 0.397);
+  }
+  
+
+
+  a {
+    text-decoration: none;
+    color: black;
+  
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: black;
+  
+  }
+
+  
+  .form-label {
+    color: whitesmoke;
+  }
+  
+  
+  footer {
+    margin-top: 15rem;
+  }
