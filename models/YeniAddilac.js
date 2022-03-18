@@ -11,7 +11,7 @@ const YeniAddilacSchema = new Schema({
   altbaslik: {
     type: String,
     required: true,
-
+  },
   CreatedAt: {
     type: Date,
     default: Date.now,
