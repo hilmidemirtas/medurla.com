@@ -1,4 +1,8 @@
 
+
+//kullanıcı ve profil girişleri
+
+
 const express = require('express');
 
 const authController = require ('../controllers/authController');
@@ -17,3 +21,4 @@ router.route('/profil').get(autMiddle, authController.getProfilPage);
 router.route('/:slug').get(categoryController.getCategory); */
 
 module.exports = router;
+
