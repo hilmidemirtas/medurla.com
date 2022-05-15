@@ -7,7 +7,7 @@ const ekleRoute = require("./routers/ekleRoute");
 const categoryRoute = require("./routers/categoryRoute");
 const userRoute = require("./routers/userRoute");
 const app = express();
-
+//Require All
 //mongoose Connect DB
 /*
 mongoose.connect('mongodb://localhost/yeni2_database').then(() => {
